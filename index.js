@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const collections = {
     codex: null,
     plugin: null,
-    anti: null
+    anti: null,
+    claude: null
   };
   let currentCollection = 'codex';
   let usecases = [];
@@ -67,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (collectionName === 'codex') url = './data/usecases.json';
         else if (collectionName === 'plugin') url = './data/plugin_usecases.json';
         else if (collectionName === 'anti') url = './data/anti_usecases.json';
+        else if (collectionName === 'claude') url = './data/claude_usecases.json';
         
         const response = await fetch(url);
         if (!response.ok) {
@@ -116,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (collectionName === 'codex') url = './data/usecases.json';
       else if (collectionName === 'plugin') url = './data/plugin_usecases.json';
       else if (collectionName === 'anti') url = './data/anti_usecases.json';
+      else if (collectionName === 'claude') url = './data/claude_usecases.json';
       
       const res = await fetch(url);
       if (res.ok) {
@@ -252,6 +255,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function translateCategory(category) {
     if (!category) return '기타';
     const catLower = category.toLowerCase().trim();
+    if (catLower === 'context & session') return '컨텍스트 & 세션';
+    if (catLower === 'workflow & dev') return '워크플로우 & 개발';
+    if (catLower === 'code quality') return '코드 품질 & 검수';
+    if (catLower === 'system & extensibility') return '시스템 & 확장성';
     if (catLower === 'notebook rag') return '노트북 RAG';
     if (catLower === 'media & multimodal') return '미디어 & 멀티모달';
     if (catLower === 'web research') return '웹 리서치';
@@ -273,6 +280,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function getCategoryClass(category) {
     if (!category) return 'badge-default';
     const catLower = category.toLowerCase().trim();
+    if (catLower === 'context & session') return 'badge-claude-context';
+    if (catLower === 'workflow & dev') return 'badge-claude-workflow';
+    if (catLower === 'code quality') return 'badge-claude-quality';
+    if (catLower === 'system & extensibility') return 'badge-claude-system';
     if (catLower === 'notebook rag') return 'badge-notebook-rag';
     if (catLower === 'media & multimodal') return 'badge-media-multimodal';
     if (catLower === 'web research') return 'badge-web-research';
@@ -502,5 +513,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load plugin & anti metadata in the background to update count badges
     fetchOtherCollectionCount('plugin');
     fetchOtherCollectionCount('anti');
+    fetchOtherCollectionCount('claude');
   });
 });

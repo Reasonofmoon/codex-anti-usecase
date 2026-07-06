@@ -841,6 +841,12 @@ body {
 .badge-media-multimodal { background: hsla(30, 95%, 55%, 0.25); color: hsl(30, 100%, 75%); }
 .badge-web-research { background: hsla(195, 90%, 55%, 0.25); color: hsl(195, 100%, 75%); }
 
+/* Category Colors (Claude Code custom categories) - Purple & Indigo based */
+.badge-claude-context { background: hsla(262, 80%, 55%, 0.25); color: hsl(262, 100%, 80%); border-color: hsla(262, 80%, 55%, 0.4); }
+.badge-claude-workflow { background: hsla(245, 85%, 60%, 0.25); color: hsl(245, 100%, 82%); border-color: hsla(245, 85%, 60%, 0.4); }
+.badge-claude-quality { background: hsla(278, 85%, 58%, 0.25); color: hsl(278, 100%, 80%); border-color: hsla(278, 85%, 58%, 0.4); }
+.badge-claude-system { background: hsla(225, 90%, 55%, 0.25); color: hsl(225, 100%, 78%); border-color: hsla(225, 90%, 55%, 0.4); }
+
 /* Collection Switcher */
 .collection-toggle-container {
   display: flex;
@@ -904,6 +910,29 @@ body {
   font-size: 0.85rem;
   opacity: 0.8;
   margin-left: 0.25rem;
+}
+
+@media (max-width: 992px) {
+  .collection-toggle-container {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%;
+    display: flex;
+  }
+  .collection-toggle-container::-webkit-scrollbar {
+    display: none;
+  }
+  .collection-toggle-track {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+  .collection-btn {
+    flex-shrink: 0;
+  }
 }
 
 /* Command Badge for Plugin Cards */
