@@ -4,7 +4,12 @@
     "title": "컨텍스트 최적화 및 압축",
     "description": "대화가 길어져 토큰 한계에 도달하거나 속도가 느려질 때, 이전 대화 맥락 중 핵심 의도와 최신 소스 코드 상태만을 요약 압축하여 대화 메모리를 비웁니다. 이를 통해 모델의 성능을 초기 상태로 복구하고 속도를 극적으로 개선합니다.",
     "category": "Context & Session",
-    "tags": ["컨텍스트", "토큰 최적화", "성능 개선", "세션 관리"],
+    "tags": [
+      "컨텍스트",
+      "토큰 최적화",
+      "성능 개선",
+      "세션 관리"
+    ],
     "insight": "장기 프로젝트 진행 시 일일 업무 시작 전에 이전 대화의 진행도를 1분 요약으로 백업하여 토큰 비용을 최소화하고 의사결정 기록을 자산화하는 파이프라인으로 응용할 수 있습니다.",
     "command": "/compact"
   },
@@ -13,7 +18,12 @@
     "title": "아키텍처 및 작업 계획 수립",
     "description": "코드를 실제로 수정하기 전, 요구사항 분석 및 기존 파일 구조 파악을 통해 구현 흐름과 영향도를 설계합니다. 예상 변경 범위와 할 일 목록을 구조화된 아웃라인으로 제공하여 작업 도중 길을 잃지 않게 돕습니다.",
     "category": "Workflow & Dev",
-    "tags": ["기획 모드", "아키텍처 설계", "작업 분석", "태스크 맵핑"],
+    "tags": [
+      "기획 모드",
+      "아키텍처 설계",
+      "작업 분석",
+      "태스크 맵핑"
+    ],
     "insight": "신규 기능 추가 또는 전면 리팩토링 전, 이 명령어를 사용하여 기술 사양서 초안을 선제적으로 생성하고 개발팀 내 합의(Alignment)를 신속하게 이끌어내는 도구로 활용합니다.",
     "command": "/plan"
   },
@@ -22,7 +32,12 @@
     "title": "Model Context Protocol (MCP) 외부 도구 연동",
     "description": "회사 내부 데이터베이스, API, 브라우저, GitHub, Jira 등의 외부 도구 및 데이터 소스를 에이전트에 연동합니다. 로컬 코드베이스 영역을 넘어 실시간 운영 데이터와 태스크 트래커 정보에 직접 접근하고 상호작용합니다.",
     "category": "System & Extensibility",
-    "tags": ["MCP", "외부 연동", "도구 결합", "인프라 제어"],
+    "tags": [
+      "MCP",
+      "외부 연동",
+      "도구 결합",
+      "인프라 제어"
+    ],
     "insight": "사내 백오피스 또는 DB 스키마와 직접 연동하여 실시간 데이터 불일치 이슈나 API 미작동 에러를 추적하고, 이를 치유하는 패치를 백그라운드에서 실시간으로 빌드 및 검증할 수 있습니다.",
     "command": "/mcp"
   },
@@ -31,7 +46,12 @@
     "title": "코드베이스 이전 상태 롤백",
     "description": "복잡한 수정이나 실험적 리팩토링 과정에서 빌드가 손상되거나 잘못된 아키텍처로 진행되었을 때, 수정 시작 이전 단계 또는 검증된 특정 안전 지점(체크포인트)으로 로컬 변경 사항을 되돌려 코드를 복구합니다.",
     "category": "Context & Session",
-    "tags": ["복구", "롤백", "안전 장치", "Git 연동"],
+    "tags": [
+      "복구",
+      "롤백",
+      "안전 장치",
+      "Git 연동"
+    ],
     "insight": "파괴적이거나 복잡도가 높은 오픈소스 이식 또는 마이그레이션 도중 실패 리스크에 대한 부담을 완전히 배제하고, AI가 다양한 실험적 알고리즘을 반복 시도하게 만듭니다.",
     "command": "/rewind"
   },
@@ -40,7 +60,12 @@
     "title": "인텔리전트 코드 리뷰 및 보안 진단",
     "description": "작성된 코드 또는 스테이징된 변경 사항의 안티패턴, 메모리 누수 가능성, 동시성 에러, 스타일 가이드 위배 여부 및 OWASP Top 10 기준의 취약점을 탐지하고, 단순 지적을 넘어 최적화된 리팩토링 솔루션까지 함께 제시합니다.",
     "category": "Code Quality",
-    "tags": ["코드 리뷰", "정적 분석", "보안 취약점", "코드 스멜"],
+    "tags": [
+      "코드 리뷰",
+      "정적 분석",
+      "보안 취약점",
+      "코드 스멜"
+    ],
     "insight": "수동 코드 리뷰 단계로 넘어가기 전 자체 정밀 필터링을 통해 리뷰어의 작업 부하를 80% 줄이고, 신입 사원의 코드 품질 수준을 시니어 개발자 수준으로 상향 평준화합니다.",
     "command": "/review"
   },
@@ -49,7 +74,12 @@
     "title": "대안 탐색 및 멀티 분기 실험",
     "description": "동일한 구현 목표에 대해 속도 최적화 경로, 메모리 아끼는 경로, 가독성 중심 경로 등 다양한 개발 방향의 분기(Fork) 브랜치를 병렬 가동하여 소스 코드를 설계하고, 각 안의 장단점과 벤치마크 결과를 대조 평가합니다.",
     "category": "Workflow & Dev",
-    "tags": ["대안 설계", "시뮬레이션", "아키텍처 비교", "분기 개발"],
+    "tags": [
+      "대안 설계",
+      "시뮬레이션",
+      "아키텍처 비교",
+      "분기 개발"
+    ],
     "insight": "성능이 민감한 핵심 알고리즘 설계 시 다각도의 솔루션을 수분 내에 검증하고 최적의 가성비를 보이는 엔지니어링 설안을 신속하게 결정하는 데이터 기반 의사결정이 가능합니다.",
     "command": "/fork"
   },
@@ -58,7 +88,12 @@
     "title": "시스템 및 의존성 환경 진단",
     "description": "개발 환경의 런타임 호환성, 패키지 의존성 버전 충돌, 누락된 환경 변수 등을 자동 점검하여 로컬 빌드가 왜 실패하는지 원인을 스캔합니다. 문제를 자동으로 감지하고 올바른 설치 명령어와 패치 스크립트를 즉시 처방합니다.",
     "category": "System & Extensibility",
-    "tags": ["환경 설정", "의존성 진단", "빌드 트러블슈팅", "온보딩"],
+    "tags": [
+      "환경 설정",
+      "의존성 진단",
+      "빌드 트러블슈팅",
+      "온보딩"
+    ],
     "insight": "새로운 프로젝트를 내려받거나 새로운 런타임으로 이식할 때 발생하는 빌드 오류를 5분 내로 자가 치유하여, 신규 조인한 개발자의 로컬 환경 설정 리소스를 획기적으로 줄여줍니다.",
     "command": "/doctor"
   },
@@ -67,7 +102,12 @@
     "title": "백그라운드 비동기 태스크 조율",
     "description": "E2E 테스트 실행, 컨테이너 빌드, 클라우드 환경 배포 등 오랜 시간이 걸리는 프로세스를 백그라운드로 전송하고 실시간 진행 로그를 관리합니다. 태스크가 실행되는 동안 개발자는 AI와 중단 없이 다른 기능 개발을 지속합니다.",
     "category": "Workflow & Dev",
-    "tags": ["비동기", "백그라운드", "멀티태스킹", "프로세스 관리"],
+    "tags": [
+      "비동기",
+      "백그라운드",
+      "멀티태스킹",
+      "프로세스 관리"
+    ],
     "insight": "빌드 대기 및 배포 대기 시간으로 인해 낭비되는 개발자 휴지 시간을 완전히 제거하여, 개발 프로세스의 지속적인 흐름(Continuous Flow)을 끊김 없이 유지합니다.",
     "command": "/tasks"
   },
@@ -76,7 +116,12 @@
     "title": "CLAUDE.md 프로젝트 컨벤션 규정 및 적용",
     "description": "프로젝트 루트의 CLAUDE.md 규칙 파일을 파싱하여 특정 명명법, 테스트 실행 패턴, 빌드 스크립트, 피해야 할 레거시 API 목록 등을 작업 컨텍스트에 강제 적용하여, 모든 생성 코드의 일관성을 자동으로 확보합니다.",
     "category": "Code Quality",
-    "tags": ["프로젝트 룰", "컨벤션", "스타일 가이드", "일관성 유지"],
+    "tags": [
+      "프로젝트 룰",
+      "컨벤션",
+      "스타일 가이드",
+      "일관성 유지"
+    ],
     "insight": "대규모 개발팀에서 신규 입사자나 외주 파트너가 들어왔을 때, 별도의 잔소리 없이 CLAUDE.md 정의만으로 팀 고유의 코딩 스타일과 품질 기준을 100% 준수하게 만듭니다.",
     "command": "CLAUDE.md"
   },
@@ -85,7 +130,12 @@
     "title": "코드베이스 전수 의미론적 검색",
     "description": "단순 키워드 찾기를 넘어, 특정 비즈니스 도메인(예: '비회원 환불 정책')의 의도가 담겨 있는 소스 코드 파편과 상호 호출 의존 관계에 있는 코드 뭉치들을 다차원 검색하여 영향 범위를 완벽하게 파악합니다.",
     "category": "Context & Session",
-    "tags": ["전수 검색", "시맨틱 서치", "의존성 파악", "영향도 분석"],
+    "tags": [
+      "전수 검색",
+      "시맨틱 서치",
+      "의존성 파악",
+      "영향도 분석"
+    ],
     "insight": "문서화되지 않은 방대한 레거시 코드베이스의 스파게티 로직을 빠르게 분석하고 리팩토링 대상을 즉각 식별하여, 안전하고 과감한 기능 현대화를 단행할 수 있습니다.",
     "command": "grep"
   },
@@ -94,7 +144,12 @@
     "title": "E2E 및 단위 테스트 자가 치유",
     "description": "테스트 실행기가 내뱉는 수백 줄의 난해한 에러 스택 트레이스를 분석하여, 깨진 단위 테스트 및 통합 테스트 코드의 버그 지점을 역추적합니다. 버그를 수정한 뒤 테스트가 통과할 때까지 '수정-실행-피드백' 루프를 자율적으로 반복합니다.",
     "category": "Code Quality",
-    "tags": ["자가 치유", "테스트 복구", "디버깅", "자동 검증"],
+    "tags": [
+      "자가 치유",
+      "테스트 복구",
+      "디버깅",
+      "자동 검증"
+    ],
     "insight": "CI/CD 파이프라인과 연동하여 테스트 실패 시 버그가 발생한 커밋을 기반으로 오류를 자동 수정하는 핫픽스 PR을 AI가 먼저 열어두게 만들어, 무장애 배포 주기를 극대화합니다.",
     "command": "test-fix"
   },
@@ -103,7 +158,12 @@
     "title": "API 명세 및 시스템 아키텍처 문서화 자동화",
     "description": "소스 코드를 깊이 분석하여 엔드포인트 명세, DB 구조도, 아키텍처 데이터 흐름도(Mermaid 형태) 등을 자동으로 컴파일하고 마크다운 문서로 내보냅니다. 기능 코드 변경에 반응하여 문서도 실시간으로 정합성을 맞춥니다.",
     "category": "Workflow & Dev",
-    "tags": ["문서화", "Mermaid", "API 명세", "아키텍처 시각화"],
+    "tags": [
+      "문서화",
+      "Mermaid",
+      "API 명세",
+      "아키텍처 시각화"
+    ],
     "insight": "개발 진척과 동시에 항상 100% 신뢰할 수 있는 개발용 시스템 사양 문서가 업데이트되므로, 기획팀/QA팀/인프라팀과의 정렬 불일치 및 소통 지연 비용을 혁신적으로 없앱니다.",
     "command": "docs"
   },
@@ -112,7 +172,12 @@
     "title": "레거시 스파게티 코드 리팩토링 및 모던화",
     "description": "중복이 많고 결합도가 높은 구 버전 라이브러리 기반 코드를 파악하여 최신 버전 문법으로 컨버전하고, SOLID 원칙이나 도메인 주도 설계(DDD) 패턴에 맞게 모듈을 재구성해 유지보수 비용을 낮춥니다.",
     "category": "Code Quality",
-    "tags": ["리팩토링", "레거시 청산", "디자인 패턴", "모던화"],
+    "tags": [
+      "리팩토링",
+      "레거시 청산",
+      "디자인 패턴",
+      "모던화"
+    ],
     "insight": "수년간 적재되어 아무도 손대지 못하던 결제 또는 정산 모듈의 핵심 비즈니스 로직을 추출하여 최적의 모듈로 세분화함으로써, 시스템 마이그레이션 및 마이크로서비스(MSA) 전환을 가속화합니다.",
     "command": "refactor"
   },
@@ -121,7 +186,12 @@
     "title": "업무 자동화 및 커스텀 스크립트 실행",
     "description": "반복되는 파일 포맷팅, 데이터 변환, 백업, 일회성 DB 테스트 씨드 데이터 삽입 등 수동으로 하기엔 지루하고 실수하기 쉬운 반복 작업을 처리할 Python, Node.js, Shell 스크립트를 즉석에서 코딩하고 바로 실행합니다.",
     "category": "System & Extensibility",
-    "tags": ["스크립팅", "업무 자동화", "유틸리티", "데이터 파싱"],
+    "tags": [
+      "스크립팅",
+      "업무 자동화",
+      "유틸리티",
+      "데이터 파싱"
+    ],
     "insight": "매번 손수 수정해야 하던 빌드 프리팹 데이터나 리소스 동기화 프로세스를 원클릭 AI 스크립트로 완전 자동화하여, 마케터나 기획자 등 타 직무 지원 리소스를 셀프 서비스화합니다.",
     "command": "run"
   },
@@ -130,7 +200,12 @@
     "title": "다국어화(i18n) 및 글로벌 로컬라이제이션 자동화",
     "description": "프로젝트 전반에 하드코딩된 한국어 및 텍스트 리소스를 탐색하여 i18n 번역 파일(JSON, YAML 등)로 분리 추출합니다. 단순 기계 번역이 아닌, 업계 표준 용어 사전과 맥락에 알맞은 자연스러운 다국어 데이터를 빌드합니다.",
     "category": "Workflow & Dev",
-    "tags": ["다국어화", "i18n", "번역 리소스", "글로벌 런칭"],
+    "tags": [
+      "다국어화",
+      "i18n",
+      "번역 리소스",
+      "글로벌 런칭"
+    ],
     "insight": "신규 해외 시장 진출 시 번역 대행사에 코드 파일을 넘길 필요 없이 개발 단계에서 현지 최적화된 다국어 다국어 리소스 적용을 즉시 끝낼 수 있어, 글로벌 타임투마켓 시간을 최소화합니다.",
     "command": "i18n"
   },
@@ -139,8 +214,715 @@
     "title": "중단 세션 복구 및 상태 재개",
     "description": "시스템 비정상 종료, 프로세스 강제 킬, 혹은 며칠간의 공백 후 작업을 재개할 때 로컬 스토리지에 남아 있는 세션 아티팩트와 커맨드 실행 히스토리를 종합 분석하여 마지막 작업 상태의 인메모리 컨텍스트를 신속히 복원합니다.",
     "category": "Context & Session",
-    "tags": ["진행 상태 복구", "연속성 보장", "세션 복원", "이력 관리"],
+    "tags": [
+      "진행 상태 복구",
+      "연속성 보장",
+      "세션 복원",
+      "이력 관리"
+    ],
     "insight": "개발 도중 예기치 않은 하드웨어 리부팅이나 개발 환경 중단이 발생하더라도 바로 이전 상태의 AI 페어 프로그래밍 대화 맥락과 중간 성과를 잃지 않는 극도의 안정성을 구축합니다.",
     "command": "resume"
+  },
+  {
+    "slug": "git-pr-feedback-response",
+    "title": "PR 자동 피드백 리스폰스",
+    "description": "GitHub Actions나 Webhook을 통해 접수된 PR 변경 요청 사항과 피드백 내용을 읽고, 제안된 코드 개선점을 로컬 브랜치에 자동 적용하는 워크플로우를 생성합니다.",
+    "category": "Workflow & Dev",
+    "tags": [
+      "Git",
+      "GitHub Actions",
+      "Pull Request",
+      "Feedback Integration"
+    ],
+    "insight": "코드 리뷰를 위한 반복 작업을 자동화하여 지속적인 통합(CI) 속도를 높이고 팀 개발 협업 품질을 향상시킵니다."
+  },
+  {
+    "slug": "git-rebase-conflict-resolver",
+    "title": "git rebase 충돌 해결 보조",
+    "description": "브랜치 리베이스 중 발생하는 코드 병합 충돌 위치를 파악하여, 소스 파일의 3-way 디프를 보고 깨끗하게 수동/자동 병합하는 가이드를 설계합니다.",
+    "category": "Workflow & Dev",
+    "tags": [
+      "Git Conflict",
+      "Rebase",
+      "Git Tool",
+      "Branch Merge"
+    ],
+    "insight": "까다로운 코드 충돌 지점을 논리적으로 해석하여 충돌 해결 시 실수로 기능 코드가 누락되거나 왜곡되는 것을 방지합니다."
+  },
+  {
+    "slug": "i18n-standard-structure",
+    "title": "다국어(i18n) 표준 구조 적용",
+    "description": "애플리케이션 내의 하드코딩된 텍스트 문자열들을 추출하고, locales/ko.json, locales/en.json 등의 국가별 표준 JSON 포맷으로 분리하고 키를 매핑하는 구조화 작업을 진행합니다.",
+    "category": "Workflow & Dev",
+    "tags": [
+      "i18n",
+      "Localization",
+      "Internationalization",
+      "Translation Management"
+    ],
+    "insight": "소스코드 전역에 흩어져 있는 다국어 지원 대상을 한데 묶어 번역 에셋 관리 효율을 200% 증대시킵니다."
+  },
+  {
+    "slug": "mobile-media-query-optimization",
+    "title": "모바일 레이아웃 미디어 쿼리 일괄 최적화",
+    "description": "복잡하게 흩어진 CSS나 Styled Components 코드에서 미디어 쿼리 분기점을 디바이스 규격별(360px, 768px, 1024px)로 통일하고 반응형 그리드를 일체화하는 작업을 지원합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "CSS Responsive",
+      "Media Query",
+      "Responsive Layout",
+      "Styled Components"
+    ],
+    "insight": "여러 화면 규격에서의 반응형 오작동 현상을 일거에 소거하고 브라우저 이식성과 프론트엔드 스타일 유연성을 높입니다."
+  },
+  {
+    "slug": "npm-vulnerability-audit",
+    "title": "npm 취약성 의존성 라이브러리 교체",
+    "description": "npm audit 결과를 토대로 보안 취약점이 발견된 라이브러리들의 버전을 교환하고, 이에 따른 코드의 API 브레이킹 체인지를 탐지하여 패치를 적용하는 복구 워크플로우를 생성합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "NPM Audit",
+      "Vulnerability Fix",
+      "Dependency Security",
+      "Patch Management"
+    ],
+    "insight": "알려진 라이브러리 취약점에 기인하는 외부 익스플로잇 가능성을 차단하고 배포 아티팩트의 보안 검수 합격을 자동 확보합니다."
+  },
+  {
+    "slug": "docker-iac-generation",
+    "title": "도커 컨테이너화 IaC 명세 생성",
+    "description": "다중 서비스 환경의 Node.js/Python 애플리케이션에 적합한 멀티 스테이지 빌드 Dockerfile 및 컨테이너 간의 네트워크와 볼륨을 조율하는 docker-compose.yml 명세를 자동 설계합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "Docker",
+      "Docker Compose",
+      "IaC",
+      "Containerization"
+    ],
+    "insight": "일관성 없는 로컬 런타임 문제를 도커 이미지 표준화로 극복하여 로컬 테스트와 실운영 환경의 불일치를 해소합니다."
+  },
+  {
+    "slug": "sql-slow-query-tuning",
+    "title": "SQL 성능 슬로우 쿼리 튜닝",
+    "description": "실행 계획(Explain) 분석 자료를 보고 인덱스 설계 유무, 서브쿼리의 조인 변환, 불필요한 테이블 풀스캔 제거 등을 수행하도록 SQL 질의문을 고도화하는 튜닝 작업을 지원합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "SQL Tuning",
+      "Slow Query",
+      "Explain Analysis",
+      "Database Performance"
+    ],
+    "insight": "부하가 심했던 대량의 원격 조인 및 대시보드 쿼리 응답 시간을 단 몇 줄의 튜닝만으로 밀리초(ms) 단위까지 끌어내립니다."
+  },
+  {
+    "slug": "env-config-checker",
+    "title": "환경 변수 설정 자동 검사",
+    "description": ".env.example 템플릿과 실행 환경의 시스템 변수를 비교하여 누락되거나 포맷이 잘못된 값(예: URL 끝에 슬래시 누락 등)이 있는지 정밀하게 확인하는 검사기를 가동합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "Environment Variables",
+      "Dotenv Check",
+      "Configuration Audit",
+      "Deployment Prep"
+    ],
+    "insight": "설정값 유효성 부족으로 발생하는 컨테이너 부트 실패 현상을 빌드 사전 단계에서 린트 검출하여 장애를 방지합니다."
+  },
+  {
+    "slug": "swagger-mock-generator",
+    "title": "Swagger API Mock Server 자동 생성",
+    "description": "OpenAPI(Swagger) YAML/JSON 사양서 파일을 기반으로 Express.js 혹은 MSW(Mock Service Worker) 환경의 프론트엔드 모의 테스트용 Mock 서버 코드를 고속 빌드합니다.",
+    "category": "Workflow & Dev",
+    "tags": [
+      "Swagger",
+      "OpenAPI",
+      "Mock Server",
+      "MSW"
+    ],
+    "insight": "백엔드 API 구현을 하염없이 기다릴 필요 없이 프론트엔드 UI 화면 디자인과 상태 흐름 검증을 동시 병렬 작업으로 전개시킵니다."
+  },
+  {
+    "slug": "microservice-unit-test-coordination",
+    "title": "마이크로서비스 단위 테스트 조율",
+    "description": "서로 의존성을 가지는 마이크로서비스 모듈 간의 Jest/PyTest 테스트 시나리오를 통합 검증하고, Mocking된 외부 서비스 응답을 구성하여 단위 테스트 성공을 유도합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "Microservices",
+      "Unit Test",
+      "Jest Mocking",
+      "PyTest Integration"
+    ],
+    "insight": "복잡하게 결합된 마이크로서비스 테스트 환경에서 격리성을 보장하며 코어 모듈들의 비즈니스 계산 결과 안정성을 탄탄하게 검증합니다."
+  },
+  {
+    "slug": "git-hooks-automation",
+    "title": "Git 훅(Husky) 자동화 구축",
+    "description": "커밋 전에 ESLint 및 테스트 통과 여부를 검증하고, 푸시 전에 민감 파일(API Key 등)의 유출 여부를 정적 탐지하는 Git 훅 스크립트 체계를 일괄 셋업합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "Git Hooks",
+      "Husky",
+      "Security Scanning",
+      "Linting Automation"
+    ],
+    "insight": "개발자 개인의 의지와 무관하게, 코드가 형상 관리에 도달하기 전 최하단의 품질 및 보안 하한선을 기계적으로 유지하도록 보조합니다."
+  },
+  {
+    "slug": "ci-cd-github-actions",
+    "title": "GitHub Actions 파이프라인 CI/CD 명세 생성",
+    "description": "테스트 빌드, 린트 검사, 패키징, 그리고 클라우드 호스팅 서비스 자동 배포 단계를 정의하는 GitHub Actions 워크플로우 설정 파일을 구축합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "CI/CD",
+      "GitHub Actions",
+      "Pipeline Automation",
+      "DevOps Config"
+    ],
+    "insight": "개발 완료 단계부터 실 배포 단계까지의 단계를 스크립트화하여 사람의 수동 조작에 수반되는 릴리즈 실수를 원천 방어합니다."
+  },
+  {
+    "slug": "react-hooks-lint-fix",
+    "title": "React Hooks 의존성 배열 자동 보정",
+    "description": "React의 useEffect, useCallback 등의 훅을 사용할 때 린터가 감지한 의존성 변수 누락이나 무한 렌더링 루프 유발 가능 요소를 자동 리팩토링합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "React Hooks",
+      "useEffect Dependency",
+      "React Render Loop",
+      "Frontend Refactoring"
+    ],
+    "insight": "React의 미세한 동적 상태 변화에 수반되는 오동작과 렌더링 메모리 누수를 신속하게 탐지해 제거해 줍니다."
+  },
+  {
+    "slug": "nestjs-module-scaffolding",
+    "title": "NestJS 모듈, 컨트롤러, 서비스 자동 스캐폴딩",
+    "description": "새로운 기능 확장을 위해 NestJS 개발 표준 아키텍처 규칙을 적용한 모듈, 서비스, 컨트롤러 및 DTO 코드를 일괄 생성하고 연결 관계를 보장합니다.",
+    "category": "Workflow & Dev",
+    "tags": [
+      "NestJS",
+      "Backend Architecture",
+      "Scaffolding",
+      "Boilerplate Template"
+    ],
+    "insight": "신규 도메인 엔드포인트 추가 시 보일러플레이트 코드 작성에 드는 단순 노동을 줄이고 비즈니스 세부 구현에 집중하도록 돕습니다."
+  },
+  {
+    "slug": "typescript-strict-compiler",
+    "title": "TypeScript strict 컴파일 에러 해결 및 타입 구체화",
+    "description": "엄격한 컴파일 제약(strict: true) 설정 시 나타나는 수많은 implicit any, null 검사 통과 실패 오류들의 원인을 분석하고 정확한 타입 명세를 매핑합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "TypeScript",
+      "Type System",
+      "Strict Mode Compiler",
+      "Runtime Safety"
+    ],
+    "insight": "타입 불안정성으로 개발 및 통합 단계에서 감지하기 힘든 버그들을 정적 타이핑 단계에서 물리적으로 완전히 걸러내는 환경을 조성합니다."
+  },
+  {
+    "slug": "python-poetry-migration",
+    "title": "pip/requirements.txt에서 Poetry 패키지 관리 도구로 마이그레이션",
+    "description": "의존성 충돌과 버전 락 관리가 곤란했던 기존 파이썬 requirements 구조를 현대화된 Poetry(pyproject.toml) 프로젝트 구조로 변환 설계합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "Python Poetry",
+      "Requirements Migration",
+      "Package Dependency",
+      "Python Toolchain"
+    ],
+    "insight": "패키지 간 하위 의존성 간섭 에러를 해소하고 신속하게 안정적인 로컬 가상 환경을 일원화해 구축할 수 있게 도웁니다."
+  },
+  {
+    "slug": "webdriver-e2e-testing",
+    "title": "Playwright/Cypress 기반 E2E 시나리오 테스트 코드 작성",
+    "description": "사용자가 웹 브라우저에서 실제 회원 가입 후 장바구니에 상품을 넣고 결제하는 전체 모의 동작 시나리오의 자동화 E2E 테스트 스크립트를 빌드합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "Playwright",
+      "Cypress",
+      "E2E Testing",
+      "Browser Automation"
+    ],
+    "insight": "수동 브라우저 테스트 클릭 작업을 기계적 스크립트에 일임하여 기능 회귀 테스트(Regression Test) 생산성을 500% 향상합니다."
+  },
+  {
+    "slug": "markdown-changelog-generator",
+    "title": "Git 커밋 로그 분석을 통한 CHANGELOG.md 자동 생성",
+    "description": "마지막 릴리즈 이후 축적된 Git 커밋 히스토리를 정규 분석하고 기능 변경, 버그 수정, 성능 향상 내역으로 자동 구조화한 CHANGELOG 문서를 작성합니다.",
+    "category": "Workflow & Dev",
+    "tags": [
+      "Git Log",
+      "Changelog Generator",
+      "Release Management",
+      "Documentation"
+    ],
+    "insight": "고객 및 파트너 개발팀에 전달할 릴리즈 내역 문서를 손쉽게 추출하고 버전 변경 마일스톤 관리를 한눈에 투명하게 제시합니다."
+  },
+  {
+    "slug": "api-error-handler",
+    "title": "전역 예외 필터 및 에러 메시지 규격화",
+    "description": "다양한 컴포넌트에서 예외 발생 시, 클라이언트에 가공되지 않은 스택트레이스 유출을 막고 통일된 표준 에러 JSON 구조를 리턴하는 미들웨어를 구축합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "Error Handling",
+      "Global Exception Filter",
+      "API Security",
+      "Middleware Architecture"
+    ],
+    "insight": "시스템 내부 세부 정보 유출을 차단하는 보안 혜택과 프론트엔드가 오류 응답 코드를 일괄 대응하는 개발 편의성을 동시에 제공합니다."
+  },
+  {
+    "slug": "eslint-prettier-align",
+    "title": "ESLint와 Prettier 스타일 규칙 충돌 해결 및 통합",
+    "description": "프로젝트 포맷팅 도구와 정적 린터의 스타일 규칙이 충돌하여 저장 시 포맷이 깨지거나 경고가 폭증할 때, 이를 해결하는 설정 통합을 설계 적용합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "ESLint Config",
+      "Prettier Integration",
+      "Linter Friction",
+      "Style Guide Alignment"
+    ],
+    "insight": "팀 내 스타일 가이드를 마찰 없이 매끄럽게 포맷팅 적용하며 불필요한 규칙 다툼성 코드 수정을 영구 차단합니다."
+  },
+  {
+    "slug": "webpack-to-vite",
+    "title": "레거시 Webpack 설정을 고속 Vite 환경으로 마이그레이션",
+    "description": "초기 로딩 및 빌드가 심각하게 오래 걸리는 Webpack 구성을 빠른 ESM 기반의 Vite 개발 도구 및 번들러 사양으로 전면 전환합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "Webpack Migration",
+      "Vite Config",
+      "Bundler Modernization",
+      "HMR Speedup"
+    ],
+    "insight": "로컬 HMR(Hot Module Replacement) 반영 속도를 수초에서 밀리초 단위로 단축하여 일일 개발 사이클 회전력을 향상시킵니다."
+  },
+  {
+    "slug": "jpa-entity-optimization",
+    "title": "Spring Boot JPA 엔티티 관계 설정 및 N+1 문제 해결",
+    "description": "관계형 데이터베이스 참조 조회 시 발생하는 N+1 조회 부하 지점을 찾고, Fetch Join 및 EntityGraph 적용 등으로 쿼리를 최적화합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "JPA Hibernate",
+      "Spring Boot",
+      "N+1 Query Issue",
+      "SQL Performance Tuning"
+    ],
+    "insight": "불필요하게 다발 생성되던 연관 관계 테이블 조회 쿼리 회수를 1회 결합 쿼리로 묶어 DB 시스템 성능 부하를 크게 낮춥니다."
+  },
+  {
+    "slug": "django-migration-debug",
+    "title": "Django DB 마이그레이션 충돌 해결 및 마이그레이션 파일 병합",
+    "description": "협업 시 다른 브랜치에서 각각 생성된 Django DB 마이그레이션 구조 충돌을 감지해 마이그레이션 히스토리 트리를 정상적으로 통합 정비합니다.",
+    "category": "Workflow & Dev",
+    "tags": [
+      "Django Migrations",
+      "Database Schema Merge",
+      "Django Backend",
+      "Conflict Repair"
+    ],
+    "insight": "로컬 데이터 변경 파일 생성 불일치로 배포 시 마이그레이션 파이프라인이 중단되는 곤경을 신속하게 극복하게 해 줍니다."
+  },
+  {
+    "slug": "fastapi-async-refactor",
+    "title": "동기식 Python API 코드를 FastAPI async/await 구조로 전환",
+    "description": "원격 호출 지연이나 I/O 블로킹이 잦은 레거시 동기식 Python API 엔드포인트들을 비동기 코루틴(Async) 구조로 전면 리팩토링합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "FastAPI",
+      "Async Coroutines",
+      "I/O Blocking Refactor",
+      "Python Concurrency"
+    ],
+    "insight": "제한된 단일 스레드 파이썬 서버 환경에서 동시 접속 요청 처리량을 최대 수십 배까지 향상하도록 성능 혜택을 줍니다."
+  },
+  {
+    "slug": "terraform-dry-run",
+    "title": "테라폼(Terraform) 인프라 코드의 구문 검사 및 Plan 결과 분석",
+    "description": "클라우드 프로비저닝 전 테라폼 명세의 신택스를 린트 검증하고, tf plan 결과를 분석해 예기치 않게 삭제되거나 영향받는 자원이 없는지 분석합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "Terraform Plan",
+      "IaC Validation",
+      "Cloud Automation",
+      "Infrastructure Security"
+    ],
+    "insight": "자칫 파괴적일 수 있는 클라우드 자원 삭제/수정 작업을 배포 승인 전에 모니터링하여 데이터 유실 사고를 확실하게 사전에 차단합니다."
+  },
+  {
+    "slug": "graphql-schema-codegen",
+    "title": "GraphQL 스키마 정의 파일 기반 TypeScript 타입 자동 생성",
+    "description": "백엔드 GraphQL 스키마에서 반환하는 데이터 모델 파일들과 클라이언트 쿼리 정의를 연동하여 완전 타입화된 API 통신 모듈을 자동 동기화합니다.",
+    "category": "Workflow & Dev",
+    "tags": [
+      "GraphQL Codegen",
+      "TypeScript Typing",
+      "API Schema Generation",
+      "Frontend Sync"
+    ],
+    "insight": "서버단 명세의 변경이 프론트엔드 타입 컴파일 단계에 즉시 반영되어 통신 데이터 필드 오타 실수를 즉각 감지해 줍니다."
+  },
+  {
+    "slug": "go-goroutine-leak-check",
+    "title": "Go 언어 고루틴 누수(Leak) 및 레이스 컨디션 감지 패치",
+    "description": "채널(Channel) 대기가 잘못되어 영구 종료되지 않고 메모리에 남아 도는 고루틴(Goroutine) 위치를 동적 진단해 적절한 컨텍스트 취소 로직을 주입합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "Golang Channels",
+      "Goroutine Leak",
+      "Race Condition Check",
+      "Context Cancellation"
+    ],
+    "insight": "백그라운드 스레드가 백그라운드에서 좀비 상태로 지속 축적되어 서서히 메모리가 고갈되는 장기 구동 데몬 장애를 조기에 해결합니다."
+  },
+  {
+    "slug": "redis-caching-decorator",
+    "title": "Spring/Node.js 서비스 레이어에 Redis 데코레이터 캐시 적용",
+    "description": "비즈니스 로직에 인라인으로 복잡하게 적혀 있는 레디스 캐시 읽기/쓰기 코드를 별도의 애너테이션 또는 데코레이터 선언으로 분리해 단순화합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "Redis Cache",
+      "Decorator Pattern",
+      "Caching Annotation",
+      "Clean Code"
+    ],
+    "insight": "핵심 비즈니스 기능 코드와 캐싱 데이터 제어 로직을 완전히 관심사 분리하여 가독성과 유지보수 유연성을 높입니다."
+  },
+  {
+    "slug": "k8s-manifest-generator",
+    "title": "Kubernetes Deployment, Service, Ingress 설정 파일 자동 작성",
+    "description": "개발 완료된 도커 컨테이너를 가상 클러스터에 배포하기 위해 리소스 제약(Limits), 프로브(Liveness/Readiness), 라우팅 규칙 명세를 구성합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "Kubernetes Manifest",
+      "Ingress Rules",
+      "Resource Allocation",
+      "Pod Lifecycle"
+    ],
+    "insight": "클러스터 배포 환경의 까다로운 템플릿 문법 실수를 최소화하고, 안정적인 파드 기동에 필요한 자원 분배를 적정 수준으로 사전에 계산해 제공합니다."
+  },
+  {
+    "slug": "nextjs-app-router-migration",
+    "title": "Next.js Pages Router에서 App Router 구조로 마이그레이션",
+    "description": "레거시 /pages 디렉터리 기반 라우팅 및 렌더링 파일 구조를 고성능 리액트 서버 컴포넌트(RSC) 중심의 /app 라우터 규격으로 리포지토리를 재조직합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "Next.js App Router",
+      "Server Components RSC",
+      "Routing Migration",
+      "Frontend Refactoring"
+    ],
+    "insight": "클라이언트 자바스크립트 번들 사이즈를 극적으로 축소하고 SEO 점수를 비약적으로 높일 수 있는 차세대 아키텍처 개편을 실현합니다."
+  },
+  {
+    "slug": "aws-s3-presigned-url",
+    "title": "S3 직접 업로드를 위한 Presigned URL 발급 API 구현",
+    "description": "클라이언트가 서버 메모리를 거치지 않고 직접 스토리로 안전하게 고용량 미디어를 업로드하게 돕는 짧은 수명의 인증 임시 URL 발급 코드를 완성합니다.",
+    "category": "Workflow & Dev",
+    "tags": [
+      "AWS S3 Store",
+      "Presigned Upload",
+      "Cloud Security",
+      "File Upload Optimize"
+    ],
+    "insight": "서버가 대량 업로드 스트림 처리를 대행하며 일으키던 네트워크 부하와 메모리 압박 문제를 프론트엔드 직접 업로드 유도로 해소합니다."
+  },
+  {
+    "slug": "websocket-reconnect-logic",
+    "title": "브라우저 웹소켓 끊김 시 지수 백오프 자동 재연결 로직 구현",
+    "description": "네트워크 와이파이 단절 등으로 웹소켓 접속 해제 시 무분별한 단순 루프 재커넥션을 시도하다 서버 소켓 자원을 채우는 오작동에 지수 재접속 가드를 삽입합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "WebSocket client",
+      "Auto Reconnect",
+      "Backoff Algorithm",
+      "Real-time Update"
+    ],
+    "insight": "서버 일시 다운 후 복구 시 수많은 클라이언트가 한꺼번에 복귀 재접속을 쏘아 발생시키는 2차 서비스 크래시 소동을 물리적으로 필터링해 줍니다."
+  },
+  {
+    "slug": "jwt-refresh-token-rotation",
+    "title": "JWT Access/Refresh 토큰 및 탈취 방지 로테이션(RTR) 구현",
+    "description": "사용자 세션 보안 강화 목적으로, 한 번 쓴 Refresh 토큰을 무효화하고 새로운 쌍을 지급하는 RTR 메커니즘 백엔드 코드와 쿠키 수명 설정을 구현합니다.",
+    "category": "Workflow & Dev",
+    "tags": [
+      "JWT Authentication",
+      "Token Rotation RTR",
+      "Session Security",
+      "Backend Identity"
+    ],
+    "insight": "사용자 브라우저 토큰 가로채기(XSS/CSRF) 공격이 성행해도 이미 소모된 토큰의 재사용이 감지되는 순간 세션 전체를 강제 파기해 보존합니다."
+  },
+  {
+    "slug": "sonar-qube-smell-reduction",
+    "title": "SonarQube 정적 분석 기반 코드 스멜 및 중복 코드 제거",
+    "description": "지속 배포 파이프라인에서 접수된 SonarQube 경고 항목 중, 인지 복잡도가 높거나 중복 분기된 구조들을 병합하고 간결한 람다 표현식 등으로 치환 개선합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "SonarQube Audit",
+      "Code Smell Fix",
+      "Refactoring Clean",
+      "Cognitive Complexity"
+    ],
+    "insight": "정적 분석 도구 통과를 위해 골치를 썩이던 다양한 코드 규칙 부적합 지적 사항들을 수분 내에 깔끔하게 해결해 품질 빌드를 완결합니다."
+  },
+  {
+    "slug": "scss-to-tailwind",
+    "title": "SCSS/CSS 스타일 명세를 Tailwind utility CSS 구조로 일괄 변환",
+    "description": "복잡하게 중첩된 구형 SCSS 파일들의 수많은 클래스 스타일 속성들을 직관적인 Tailwind CSS 프레임워크 클래스셋으로 매핑 및 인라인 대체합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "Tailwind Conversion",
+      "SCSS Refactor",
+      "Utility First CSS",
+      "CSS Modernization"
+    ],
+    "insight": "중구난방 늘어나던 전역 스타일시트 크기를 제로 수준으로 줄이고 컴포넌트 내부에서 마찰 없는 독립 화면 배치를 지원합니다."
+  },
+  {
+    "slug": "logging-tracing-elk",
+    "title": "Winston/Logback 설정을 활용한 ELK/Grafana 로그 포맷팅",
+    "description": "시스템 모니터링 수집기가 텍스트 기반 로그를 편리하게 파싱할 수 있게 로그 포맷을 JSON 규격으로 표준화하고, Trace ID를 연계하는 구성을 추가합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "System Logger",
+      "JSON Log Format",
+      "Trace ID Correlator",
+      "ELK Stack"
+    ],
+    "insight": "분산 환경에서 하나의 사용자 요청이 여러 서버를 오가는 전체 이벤트 타임라인을 하나의 Trace ID로 검색 추적하도록 디버깅 편의를 확장합니다."
+  },
+  {
+    "slug": "junit-parameterized-test",
+    "title": "JUnit 5 파라미터화 테스트 코드 작성을 통한 커버리지 확보",
+    "description": "동일한 비즈니스 유효성 검사 로직에 대해 다양한 극단값(Boundary Values) 및 오염 데이터를 넘기는 파라미터화 테스트(@ParameterizedTest) 코드를 구축합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "JUnit 5 testing",
+      "Parameterized Test",
+      "Test Coverage",
+      "Quality Assurance"
+    ],
+    "insight": "비슷한 테스트 케이스를 수십 개 중복 작성하던 중복 코드를 제거하고, 극단값 대응 테스트의 효율과 검증 커버리지를 비약적으로 높입니다."
+  },
+  {
+    "slug": "spring-security-oauth",
+    "title": "Spring Security 기반 Google/GitHub OAuth2 소셜 로그인 연동",
+    "description": "Spring Boot 앱의 보안 모듈에 외부 OAuth2 공급업체의 사용자 위임 인증 속성들을 매핑하고 커스텀 UserDetails 객체로 변환 연동하는 설정을 완성합니다.",
+    "category": "Workflow & Dev",
+    "tags": [
+      "Spring Security",
+      "OAuth 2.0 Integration",
+      "Social Signin",
+      "Identity Service"
+    ],
+    "insight": "직접 구현하기 번거롭고 취약한 보안 관리가 수반되는 회원 가입 및 비밀번호 관리 리스크를 인증 플랫폼 위임으로 극복하게 합니다."
+  },
+  {
+    "slug": "electron-forge-packaging",
+    "title": "Electron 데스크톱 앱의 크로스 패키징 및 서명 설정 자동화",
+    "description": "자바스크립트 웹 앱을 네이티브 데스크톱 실행 파일로 묶기 위한 Electron Forge 빌드 설정과 Windows/macOS용 앱 서명(Signing) 스크립트를 조율합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "Electron Forge",
+      "Desktop Package",
+      "App Code Signing",
+      "Cross Compile"
+    ],
+    "insight": "운영체제별 설치 프로그램 빌드 및 알 수 없는 게시자 경고 방지 서명 작업을 CLI 상에서 실시간 환경 변수 인젝션으로 처리합니다."
+  },
+  {
+    "slug": "graphql-n-plus-one-dataloader",
+    "title": "GraphQL N+1 쿼리 방지를 위한 DataLoader 적용",
+    "description": "GraphQL 리졸버(Resolver) 트리 탐색 시 하위 객체들마다 DB 단독 조회를 반복 쏘아 오버헤드를 일으키는 로직에 배치성 일괄 데이터 로딩 모듈을 삽입합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "GraphQL API",
+      "DataLoader Batch",
+      "SQL Fetch Optimize",
+      "Resolver Tuning"
+    ],
+    "insight": "사용자가 중첩 객체를 무제한 요청해도 단 몇 번의 최적화 배치 쿼리로 DB 응답 조회를 깔끔히 완료하여 부하를 경감시킵니다."
+  },
+  {
+    "slug": "prisma-schema-migration",
+    "title": "Prisma ORM 스키마 변경 및 DB 마이그레이션 적용",
+    "description": "schema.prisma 파일의 모델 구조 수정 사항을 동적으로 반영해 데이터베이스 테이블 정의를 업데이트하는 로컬 마이그레이션 코드를 빌드 실행합니다.",
+    "category": "Workflow & Dev",
+    "tags": [
+      "Prisma ORM",
+      "Schema Migrate",
+      "DB Versioning",
+      "TypeSafe Client"
+    ],
+    "insight": "DB 스키마 형상 변화와 TS 자동완성 클라이언트 모델 정보를 완벽히 동기화해 런타임 타입 오류 발생 가능성을 사전 예방합니다."
+  },
+  {
+    "slug": "aws-lambda-bundling",
+    "title": "AWS Lambda 업로드를 위한 최소 크기 의존성 번들링 자동화",
+    "description": "서버리스 함수 구동 속도 저하(Cold Start)를 막기 위해, 빌드된 JS 파일의 미사용 라이브러리를 흔들어 털고(Tree shaking) 경량 에셋으로 패키징합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "AWS Lambda Build",
+      "Serverless Optimization",
+      "Cold Start Tuning",
+      "Bundler Minify"
+    ],
+    "insight": "수십 메가에 육박하던 배포 파일 크기를 1MB 미만으로 최적화하여 람다 초기 로딩 부트 지연 속도를 획기적으로 개선합니다."
+  },
+  {
+    "slug": "redux-to-zustand",
+    "title": "Boilerplate가 많은 Redux 스토어를 경량화된 Zustand 상태로 전환",
+    "description": "액션 크리에이터, 리듀서 생성에 수많은 코드가 소비되던 리덕스 구조를 직관적인 훅(Hook) 형태의 얇은 즈스탠드 글로벌 상태 컴포넌트로 리팩토링합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "Zustand Store",
+      "Redux Migration",
+      "React State Management",
+      "Clean Codebase"
+    ],
+    "insight": "상태 관리 유지를 위한 의미 없는 코드 라인수를 70% 이상 정리하여 전체 프론트엔드 가독성을 크게 상향합니다."
+  },
+  {
+    "slug": "rust-cargo-clippy-fix",
+    "title": "Rust 프로젝트의 Cargo Clippy 권장 사항 자동 반영 및 린트 수정",
+    "description": "러스트 빌더 컴파일 전 clippy 도구가 진단한 안전하지 않거나 비효율적인 레거시 표기법들을 감지해 표준적인 Idiomatic Rust 문법으로 고정 수정합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "Rust Clippy",
+      "Idiomatic Rust",
+      "Memory Safety",
+      "Linter Correction"
+    ],
+    "insight": "소유권(Ownership) 및 빌림(Borrowing) 개념에 위배되기 쉬운 복잡한 고속 연산부 코드를 러스트 언어 규격에 꼭 부합하게 안정화합니다."
+  },
+  {
+    "slug": "pandas-vectorization",
+    "title": "Pandas 데이터프레임의 slow loop 연산을 벡터화 연산으로 튜닝",
+    "description": "파이썬 데이터 분석 시 데이터프레임의 iterrows() 반복문을 활용하던 연산 코드를 CPU 레벨 병렬 처리가 지원되는 넘파이 기반 벡터 연산식으로 최적화합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "Pandas Vectorize",
+      "Data Processing",
+      "Python Analytics",
+      "Numpy Parallelism"
+    ],
+    "insight": "수백만 건의 로컬 로그나 CSV 가공 분석 작업 시간을 기존 대비 최대 100배 이상 단축시키는 실질적 퍼포먼스 패치를 제공합니다."
+  },
+  {
+    "slug": "openapi-client-sdk",
+    "title": "OpenAPI 사양을 기반으로 한 클라이언트 API SDK 소스코드 자동 생성",
+    "description": "사내 공통 OpenAPI JSON 주소를 활용해, 클라이언트 사이드 프론트엔드에서 수동 코딩 없이 즉시 임포트해 쓸 수 있는 TS 타입 정의 API Client SDK 패키지를 빌드합니다.",
+    "category": "Workflow & Dev",
+    "tags": [
+      "OpenAPI Generator",
+      "API SDK",
+      "TypeScript Client",
+      "Interface Sync"
+    ],
+    "insight": "서버 개발 명세가 수정될 때마다 수작업으로 클라이언트 연동 API 함수를 새로 타이핑하여 맞추는 비효율을 완벽히 퇴치합니다."
+  },
+  {
+    "slug": "cucumber-bdd-scenarios",
+    "title": "Cucumber 기반 BDD 인수 테스트 시나리오 및 Step Definition 작성",
+    "description": "기획자의 요구사항 텍스트(Given-When-Then)를 그대로 실행 테스트 코드로 묶어주는 Cucumber BDD 시나리오 사양과 프론트엔드 연동 헬퍼들을 연동 구성합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "Cucumber BDD",
+      "Acceptance Testing",
+      "Spec Definition",
+      "Feature Scenario"
+    ],
+    "insight": "비즈니스 기획 사양의 요구 명세서 자체가 실행 가능한 자동화 테스트 규격으로 승화되어 요구 조건 불일치 장애를 사전 진단합니다."
+  },
+  {
+    "slug": "nginx-reverse-proxy",
+    "title": "Nginx 리버스 프록시 및 Rate Limiting, SSL 인증서 셋업",
+    "description": "백엔드 API 서버 전면에 배치될 Nginx 웹 서버 환경에서 서브 도메인 라우팅, HTTPS 무료 인증서 셋업, 비정상 대량 호출 속도 제어를 선언 구성합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "Nginx Config",
+      "Reverse Proxy",
+      "Rate Limiter Web",
+      "HTTPS Certbot"
+    ],
+    "insight": "백엔드 노드가 원시적으로 감당하기 어려운 네트워크 필터링 책임을 앞단의 경량 Nginx 레이어에 위임해 부하와 위협을 차단합니다."
+  },
+  {
+    "slug": "firebase-security-rules",
+    "title": "Firebase Firestore/Realtime DB 보안 규칙(Rules) 검증 및 작성",
+    "description": "클라이언트 다이렉트 연동 DB인 파이어베이스 환경에서 비인가 권한 사용자가 다른 사람의 노드를 조회하거나 쓰지 못하도록 DB 보안 규칙을 명세 설계합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "Firebase Rules",
+      "NoSQL Security",
+      "Access Control rules",
+      "Serverless Identity"
+    ],
+    "insight": "백엔드 서버 대리 통제 없이 바로 저장소로 닿는 아키텍처 환경의 전형적인 무인증 데이터 변조 보안 홀을 원천 예방합니다."
+  },
+  {
+    "slug": "lerna-monorepo-bootstrap",
+    "title": "Lerna/pnpm workspace 기반의 모노레포 종속성 빌드 조율",
+    "description": "공통 라이브러리 패키지와 여러 서비스가 하나의 레포지토리에 동거하는 모노레포 구조에서, 상호 의존 관계 변경 시 영향받는 하위 모듈만 고속 컴파일하도록 관리합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "Lerna Monorepo",
+      "pnpm workspace",
+      "Dependency Link",
+      "Build Orchestrator"
+    ],
+    "insight": "수십 개 하위 모듈들의 중복 패키지 버전을 링킹 처리하여 로컬 디스크 공간 소모를 줄이고 독립 빌드 사이클을 정밀화합니다."
+  },
+  {
+    "slug": "security-headers-csp",
+    "title": "웹 취약점 대응을 위한 Content Security Policy(CSP) 헤더 추가",
+    "description": "브라우저가 신뢰할 수 없는 도메인으로부터의 자바스크립트 강제 인젝션 및 실행을 차단하도록 지시하는 CSP 규칙 헤더들을 백엔드 공통 응답에 세팅합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "CSP Headers",
+      "XSS Mitigation",
+      "Browser Security",
+      "Response Filter"
+    ],
+    "insight": "유해 배너 광고 스크립트나 해킹 코드가 유입되어도 브라우저 지시 단에서 실행 자체를 무력화시키는 최후의 프론트 보안선을 형성합니다."
+  },
+  {
+    "slug": "prometheus-metrics-exporter",
+    "title": "Prometheus 수집용 커스텀 메트릭스(Counter, Gauge) 익스포터 구현",
+    "description": "애플리케이션 내의 실시간 동시 가입자 수나 특정 결제 시도 횟수를 측정하여 모니터링 수집 시스템에 규격 노출하는 프로메테우스 클라이언트를 결합합니다.",
+    "category": "System & Extensibility",
+    "tags": [
+      "Prometheus Export",
+      "Metrics Monitoring",
+      "Grafana Gauge",
+      "Application Telemetry"
+    ],
+    "insight": "단순 OS 성능 측정을 넘어 비즈니스 상태 변화 지표를 모니터링 대시보드와 실시간 연동해 장애 징후를 빠르게 잡아냅니다."
+  },
+  {
+    "slug": "dotnet-entity-framework-lazy-load",
+    "title": ".NET EF Core의 N+1 지연 로딩 문제 진단 및 즉시 로딩 해결",
+    "description": ".NET Core 웹 API 백엔드 DB 연동 중, 자식 관계 데이터를 참조할 때 지연 로딩 때문에 무수히 많이 분기 방출되는 SQL 성능 지체 코드를 Include 즉시 로더로 복구합니다.",
+    "category": "Code Quality",
+    "tags": [
+      "EF Core .NET",
+      "N+1 Query",
+      "Eager Loading Include",
+      "Database Optimization"
+    ],
+    "insight": "사용자 목록이나 게시판 조회 시 네트워크와 DB 자원이 동시에 마비되는 슬로우 다운 현상을 간결한 선언 추가로 해결합니다."
+  },
+  {
+    "slug": "storybook-component-preview",
+    "title": "UI 컴포넌트의 가시성 검증을 위한 Storybook 스토리 파일 자동 생성",
+    "description": "완성된 리액트/뷰 UI 컴포넌트들의 각 옵션값(Props) 조합에 상응하는 독립 웹 뷰어 확인용 스토리(*.stories.tsx) 사양 코드를 일괄 구축합니다.",
+    "category": "Workflow & Dev",
+    "tags": [
+      "Storybook",
+      "UI Component Preview",
+      "Design System QA",
+      "React Stories"
+    ],
+    "insight": "디자이너 및 타 부서 담당자들이 실제 로컬 코드를 다 실행하지 않고도 웹 브라우저 상에서 컴포넌트의 다각적 레이아웃 변화를 직접 만져보게 유도합니다."
   }
 ]
