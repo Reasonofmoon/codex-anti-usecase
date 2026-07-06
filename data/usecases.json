@@ -836,5 +836,170 @@
     "url": "https://developers.openai.com/codex/use-cases/event-launch-playbooks",
     "category": "Knowledge Work",
     "insight": "웨비나나 오프라인 출시 행사 진행 시 연사 연락, 참가 신청 확인 메일 자동 발송, 입장 QR 코드 스캔 시스템 배포, 행사 후 설문조사 취합에 이르는 모든 주기별 오퍼레이션 작업을 하나의 시나리오 에이전트로 묶어 일관성 있게 조율할 수 있습니다."
+  },
+  {
+    "slug": "monolith-to-msa-migration-planning",
+    "title": "모놀리식 아키텍처의 MSA 분할 기획",
+    "description": "대규모 레거시 모놀리식 시스템의 의존성 구조를 분석하고 도메인 주도 설계(DDD) 기반의 마이크로서비스(MSA) 경계 획정 및 점진적 전환 로드맵을 자동으로 설계합니다.",
+    "tags": [
+      "MSA",
+      "아키텍처 설계",
+      "의존성 분석",
+      "DDD"
+    ],
+    "image": "/codex/use-cases/monolith-to-msa-migration-planning.webp",
+    "url": "https://developers.openai.com/codex/use-cases/monolith-to-msa-migration-planning",
+    "category": "Engineering",
+    "insight": "단순 모듈 구분을 넘어 소스 코드 내 결합도가 높은 패키지와 데이터베이스 테이블 간 참조 관계까지 정적 분석하여, 서비스 분할 시 발생할 수 있는 분산 트랜잭션(Saga 패턴 등) 최소화 경로를 추천할 수 있습니다."
+  },
+  {
+    "slug": "auto-i18n-localization-patch",
+    "title": "다국어 국제화(i18n) 번역 자동 패치",
+    "description": "코드베이스 내 하드코딩된 원시 문자열을 탐지하여 번역 리소스 파일(JSON/YAML)로 외재화하고, LLM을 통해 컨텍스트를 고려한 고품질 다국어 번역을 자동으로 일괄 적용합니다.",
+    "tags": [
+      "i18n",
+      "로컬라이제이션",
+      "자동화",
+      "리팩토링"
+    ],
+    "image": "/codex/use-cases/auto-i18n-localization-patch.webp",
+    "url": "https://developers.openai.com/codex/use-cases/auto-i18n-localization-patch",
+    "category": "Front-end",
+    "insight": "UI 컴포넌트의 가용 너비와 줄바꿈 제한 조건을 사전 인지하여, 독일어/프랑스어 등 텍스트 길이가 길어지는 언어 번역 시 UI 레이아웃 깨짐을 방지하는 글자 수 최적화 번역을 연동할 수 있습니다."
+  },
+  {
+    "slug": "dependency-vulnerability-batch-patch",
+    "title": "리포지토리 의존성 라이브러리 일괄 취약점 패치",
+    "description": "보안 취약점 DB(CVE)와 매핑하여 프로젝트 의존성 트리의 취약 버전을 식별하고, 하위 호환성을 검증하는 단위 테스트를 수행하면서 안전한 상위 버전으로 마이너/패치 업그레이드를 일괄 수행합니다.",
+    "tags": [
+      "보안",
+      "의존성 관리",
+      "CI/CD",
+      "패치"
+    ],
+    "image": "/codex/use-cases/dependency-vulnerability-batch-patch.webp",
+    "url": "https://developers.openai.com/codex/use-cases/dependency-vulnerability-batch-patch",
+    "category": "Engineering",
+    "insight": "단순 버전 올림에 그치지 않고, 버전 업그레이드로 인해 Deprecated되거나 변경된 API 호출부의 코드를 추적하여 자동으로 대체 코드를 작성하고 검증 피드백 루프를 결합할 수 있습니다."
+  },
+  {
+    "slug": "database-schema-ddl-generator",
+    "title": "자연어 기반 DB 스키마 설계 및 DDL 생성",
+    "description": "기획 의도가 담긴 한글 요구사항 명세서로부터 최적화된 RDB 테이블 관계를 유추하고, 각 DBMS(MySQL, PostgreSQL 등)의 문법에 맞는 물리 DDL 및 ERD 마크다운 문서 생성을 자동화합니다.",
+    "tags": [
+      "데이터베이스",
+      "DDL",
+      "스키마 설계",
+      "데이터 모델링"
+    ],
+    "image": "/codex/use-cases/database-schema-ddl-generator.webp",
+    "url": "https://developers.openai.com/codex/use-cases/database-schema-ddl-generator",
+    "category": "Data",
+    "insight": "정규화 수준(3NF) 검증뿐 아니라 자주 사용되는 쿼리 패턴을 추정하여 성능 향상을 위한 최적의 인덱스 설계안과 파티셔닝 전략을 권고안 형태로 첨부할 수 있습니다."
+  },
+  {
+    "slug": "serverless-cloud-infrastructure-iac-builder",
+    "title": "서버리스 클라우드 인프라 IaC 템플릿 생성",
+    "description": "애플리케이션 서비스 아키텍처 구상을 입력받아 Terraform 또는 AWS CloudFormation 등의 인프라 코드(IaC)를 안전하고 표준화된 보안 보안 룰에 맞춰 자동 생성합니다.",
+    "tags": [
+      "IaC",
+      "Terraform",
+      "클라우드",
+      "DevOps"
+    ],
+    "image": "/codex/use-cases/serverless-cloud-infrastructure-iac-builder.webp",
+    "url": "https://developers.openai.com/codex/use-cases/serverless-cloud-infrastructure-iac-builder",
+    "category": "Automation",
+    "insight": "생성된 Terraform 코드에 대해 실시간으로 보안 정적 분석(tfsec 등)을 구동하고, 최소 권한 원칙(Principle of Least Privilege)을 위배하는 IAM 정책이나 퍼블릭 오픈 포트 설정을 즉시 교정하여 무결한 배포 코드를 제공합니다."
+  },
+  {
+    "slug": "api-documentation-and-mock-server-generation",
+    "title": "백엔드 코드 분석 기반 API 명세 및 Mock 서버 자동 구축",
+    "description": "스프링 부트나 FastAPI 등 백엔드 소스 코드를 스캔하여 OpenAPI Spec(Swagger) 문서를 완전 자동 갱신하고, 프론트엔드 개발자가 즉시 테스트 가능한 목(Mock) API 서버 컨테이너를 가동합니다.",
+    "tags": [
+      "Swagger",
+      "OpenAPI",
+      "Mocking",
+      "백엔드"
+    ],
+    "image": "/codex/use-cases/api-documentation-and-mock-server-generation.webp",
+    "url": "https://developers.openai.com/codex/use-cases/api-documentation-and-mock-server-generation",
+    "category": "Engineering",
+    "insight": "단순 명세 생성을 넘어 실제 비즈니스 흐름과 유사한 테스트용 가상 데이터를 LLM이 동적으로 생성하여 반환하는 지능형 Mock API 서버로 확장할 수 있습니다."
+  },
+  {
+    "slug": "automated-codebase-refactoring-for-performance",
+    "title": "성능 향상을 위한 코드베이스 정밀 리팩토링",
+    "description": "불필요한 루프 반복, N+1 쿼리 문제, 비효율적인 동기식 I/O를 탐지하여 비동기 처리 및 캐싱 계층이 포함된 고성능 코드로 리팩토링합니다.",
+    "tags": [
+      "성능 최적화",
+      "리팩토링",
+      "비동기",
+      "캐싱"
+    ],
+    "image": "/codex/use-cases/automated-codebase-refactoring-for-performance.webp",
+    "url": "https://developers.openai.com/codex/use-cases/automated-codebase-refactoring-for-performance",
+    "category": "Engineering",
+    "insight": "리팩토링 전후의 시간/공간 복잡도를 빅오(Big-O) 표기법으로 산출하고, 벤치마크 테스트 스크립트를 동시 작성하여 실제 성능 개선율을 수치로 검증할 수 있습니다."
+  },
+  {
+    "slug": "legacy-code-documentation-generator",
+    "title": "레거시 코드 자동 주석화 및 개발자 가이드북 생성",
+    "description": "주석이 부재하거나 난해한 레거시 언어(Cobol, Fortran, 또는 오래된 PHP/JSP) 코드를 해석하여 비즈니스 로직 단위의 한글 주석을 심고 상세한 시스템 아키텍처 명세서를 생성합니다.",
+    "tags": [
+      "레거시",
+      "문서화",
+      "리버스 엔지니어링",
+      "주석"
+    ],
+    "image": "/codex/use-cases/legacy-code-documentation-generator.webp",
+    "url": "https://developers.openai.com/codex/use-cases/legacy-code-documentation-generator",
+    "category": "Knowledge Work",
+    "insight": "주석 추가에 머무르지 않고, 해당 레거시 로직을 최신 Java Spring이나 Python FastAPI 코드로 포팅할 수 있는 변환 전략과 상세 매핑 가이드를 동시 제공하여 마이그레이션 프로젝트의 기획 단계 기간을 절반으로 단축할 수 있습니다."
+  },
+  {
+    "slug": "e2e-test-scenarios-automated-generation",
+    "title": "사용자 시나리오 기반 E2E 테스트 스크립트 자동 생성",
+    "description": "스토리보드나 요구사항 정의서를 분석하여 Playwright, Cypress 등의 프레임워크에서 즉시 동작하는 엔드투엔드(E2E) UI 테스트 시나리오 스크립트를 작성합니다.",
+    "tags": [
+      "QA",
+      "E2E 테스트",
+      "Playwright",
+      "자동화"
+    ],
+    "image": "/codex/use-cases/e2e-test-scenarios-automated-generation.webp",
+    "url": "https://developers.openai.com/codex/use-cases/e2e-test-scenarios-automated-generation",
+    "category": "Front-end",
+    "insight": "네트워크 장애, 비정상 결제 승인 실패 등 예외적인 엣지 케이스 시나리오를 지능적으로 자가 생성하고, 실제 브라우저 자동화 실행 중 발생하는 타임아웃 오류를 분석해 스크립트를 자가 치유(Self-healing)하는 견고한 QA 파이프라인으로 연결할 수 있습니다."
+  },
+  {
+    "slug": "automated-code-conversion-to-modern-framework",
+    "title": "레거시 프레임워크의 최신 모던 프레임워크 변환",
+    "description": "AngularJS 1.x 또는 레거시 React 클래스형 컴포넌트를 최신 React Functional Components 및 Hooks 아키텍처로 자동 재작성하여 기술 부채를 해소합니다.",
+    "tags": [
+      "프레임워크 전환",
+      "React",
+      "마이그레이션",
+      "기술 부채"
+    ],
+    "image": "/codex/use-cases/automated-code-conversion-to-modern-framework.webp",
+    "url": "https://developers.openai.com/codex/use-cases/automated-code-conversion-to-modern-framework",
+    "category": "Front-end",
+    "insight": "컴포넌트 리팩토링 외에 빌드 도구(Webpack ➔ Vite) 및 의존성 라이브러리의 중대한 API 사양 변경 사항까지 전수 조사하여 완벽하게 컴파일되는 통합 마이그레이션 PR을 구성할 수 있습니다."
+  },
+  {
+    "slug": "log-analysis-and-production-incident-triage",
+    "title": "라이브 로그 실시간 분석 및 장애 트리아지",
+    "description": "Elasticsearch나 Datadog 등에서 추출된 라이브 애플리케이션 에러 로그와 스택 트레이스를 분석하여, 장애의 원인을 진단하고 수정 권고 조치를 신속하게 작성합니다.",
+    "tags": [
+      "장애 복구",
+      "모니터링",
+      "트리아지",
+      "운영"
+    ],
+    "image": "/codex/use-cases/log-analysis-and-production-incident-triage.webp",
+    "url": "https://developers.openai.com/codex/use-cases/log-analysis-and-production-incident-triage",
+    "category": "Automation",
+    "insight": "과거에 깃허브에서 완료된 유사 이슈 해결 내역(PR 및 커밋 로그)과 현재 장애 상황을 기계 학습 기반 매핑으로 대조하여, 긴급 롤백 가이드라인 및 핫픽스 코드를 단 몇 분 만에 온콜(On-Call) 담당자에게 제공할 수 있습니다."
   }
 ]
