@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codex 활용 사례 | 대화형 대시보드</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="자동화, 개발/엔지니어링, 데이터 분석, 지식 노동, 프론트엔드, 모바일 등을 포함한 고급 Codex 활용 사례를 살펴보세요. 프로덕션 준비가 완료된 AI 템플릿을 찾아보세요.">
+  <meta name="keywords" content="Codex, 코덱스, AI 템플릿, 자동화, 개발/엔지니어링, 데이터 분석, 프론트엔드, 모바일 앱">
+  
+  <!-- Google Fonts: Outfit (Header) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Background Decorative Blurs -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-3"></div>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header class="main-header">
+      <div class="logo-area">
+        <span class="logo-icon"><i class="fa-solid fa-microchip"></i></span>
+        <span class="logo-text">Codex <span class="accent-text">허브</span></span>
+      </div>
+      <h1 class="main-title">Codex 활용 사례 <span class="gradient-text">디렉토리</span></h1>
+      <p class="subtitle">워크플로우를 자동화하고 엔지니어링을 가속화하는 고급 AI 템플릿을 검색하고 필터링하여 즉시 활용해 보세요.</p>
+      
+      <!-- 컬렉션 토글 탭 -->
+      <div class="collection-toggle-container">
+        <div class="collection-toggle-track">
+          <button class="collection-btn active" data-collection="codex" id="col-btn-codex">
+            <i class="fa-solid fa-brain icon"></i>
+            <span>OpenAI Codex 유스케이스 <span class="col-count" id="count-codex">(60)</span></span>
+          </button>
+          <button class="collection-btn" data-collection="plugin" id="col-btn-plugin">
+            <i class="fa-solid fa-puzzle-piece icon"></i>
+            <span>Antigravity 플러그인 유스케이스 <span class="col-count" id="count-plugin">(23)</span></span>
+          </button>
+          <button class="collection-btn" data-collection="anti" id="col-btn-anti">
+            <i class="fa-solid fa-triangle-exclamation icon"></i>
+            <span>안티 유스케이스 <span class="col-count" id="count-anti">(0)</span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Stats Summary Section (Stats Cards) -->
+    <section class="stats-section" aria-label="대시보드 통계">
+      <div class="stats-card" id="stats-total">
+        <div class="stats-icon"><i class="fa-solid fa-cubes"></i></div>
+        <div class="stats-info">
+          <span class="stats-label">전체 유스케이스 수</span>
+          <span class="stats-value" id="val-total">0</span>
+        </div>
+      </div>
+      <div class="stats-card" id="stats-categories">
+        <div class="stats-icon"><i class="fa-solid fa-tags"></i></div>
+        <div class="stats-info">
+          <span class="stats-label">카테고리 수</span>
+          <span class="stats-value" id="val-categories">0</span>
+        </div>
+      </div>
+      <div class="stats-card" id="stats-tags">
+        <div class="stats-icon"><i class="fa-solid fa-hashtag"></i></div>
+        <div class="stats-info">
+          <span class="stats-label">고유 태그 수</span>
+          <span class="stats-value" id="val-tags">0</span>
+        </div>
+      </div>
+      <div class="stats-card" id="stats-popular">
+        <div class="stats-icon"><i class="fa-solid fa-fire"></i></div>
+        <div class="stats-info">
+          <span class="stats-label">인기 카테고리</span>
+          <span class="stats-value" id="val-popular">N/A</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="control-section" aria-label="유스케이스 검색 및 필터링">
+      <!-- Search Input Container -->
+      <div class="search-container">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="제목, 설명 또는 태그로 검색..." 
+          aria-label="유스케이스 검색"
+          autocomplete="off"
+        >
+        <button id="search-clear-btn" class="search-clear-btn" aria-label="검색어 지우기" style="display: none;">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Categories Filter Tabs -->
+      <nav class="filter-tabs-wrapper" aria-label="카테고리 필터">
+        <ul class="filter-tabs" id="filter-tabs-list">
+          <li><button class="filter-tab active" id="filter-all" data-category="all">전체</button></li>
+          <li><button class="filter-tab" id="filter-automation" data-category="Automation">자동화</button></li>
+          <li><button class="filter-tab" id="filter-engineering" data-category="Engineering">개발/엔지니어링</button></li>
+          <li><button class="filter-tab" id="filter-data" data-category="Data">데이터 분석</button></li>
+          <li><button class="filter-tab" id="filter-knowledge-work" data-category="Knowledge Work">지식 노동</button></li>
+          <li><button class="filter-tab" id="filter-frontend" data-category="Front-end">프론트엔드</button></li>
+          <li><button class="filter-tab" id="filter-mobile" data-category="Mobile">모바일</button></li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Use Cases Grid Section -->
+    <main class="grid-section">
+      <div class="usecase-grid" id="usecase-grid" aria-live="polite">
+        <!-- Rendered Dynamically via JS -->
+      </div>
+      
+      <!-- No Results State -->
+      <div class="no-results" id="no-results-view" style="display: none;">
+        <div class="no-results-icon"><i class="fa-solid fa-magnifying-glass-blur"></i></div>
+        <h3>검색 결과가 없습니다</h3>
+        <p>검색 키워드를 조정하거나 다른 카테고리를 선택해 보세요.</p>
+        <button id="reset-filters-btn" class="btn btn-secondary">필터 초기화</button>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>&copy; 2026 Codex 허브. Powered by Advanced Agentic Coding.</p>
+    </footer>
+  </div>
+
+  <!-- Detail Modal -->
+  <div class="modal-overlay" id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display: none;">
+    <div class="modal-wrapper">
+      <button class="modal-close" id="modal-close-btn" aria-label="모달 닫기">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="modal-content">
+        <!-- Modal visual header/banner -->
+        <div class="modal-banner" id="modal-banner">
+          <div class="category-badge" id="modal-category">카테고리</div>
+        </div>
+
+        <div class="modal-body">
+          <h2 class="modal-title" id="modal-title">유스케이스 제목</h2>
+          
+          <!-- 슬래시 명령어 영역 -->
+          <div class="modal-command-wrapper" id="modal-command-wrapper" style="display: none;">
+            <code class="modal-command-badge"><i class="fa-solid fa-terminal"></i> <span id="modal-command">/agy:command</span></code>
+          </div>
+          
+          <div class="modal-tags" id="modal-tags">
+            <!-- Tags rendered dynamically -->
+          </div>
+
+          <p class="modal-description" id="modal-description">
+            유스케이스의 상세 설명이 여기에 들어갑니다.
+          </p>
+
+          <!-- 창의적 응용 제안 섹션 추가 -->
+          <div class="modal-insight-section" id="modal-insight-section" style="display: none;">
+            <h4 class="insight-title"><i class="fa-regular fa-lightbulb"></i> 창의적 응용 제안</h4>
+            <p class="insight-content" id="modal-insight">
+              창의적 응용 제안 내용이 여기에 들어갑니다.
+            </p>
+          </div>
+
+          <div class="modal-action-row">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="modal-action-btn">
+              <span class="btn-text">참조 페이지 열기</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="index.js"></script>
+</body>
+</html>
